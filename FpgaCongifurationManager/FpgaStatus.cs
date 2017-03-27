@@ -8,6 +8,8 @@ namespace FpgaPysical
 {
     public class FpgaStatus
     {
+        public string ipAddress = "";
+        public int portNumber = 2000;
         public bool grobalApplied = false;
         public bool[] chStatusList = new bool[65];
         public int[][] dac = new int[6][];

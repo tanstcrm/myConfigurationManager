@@ -15,6 +15,20 @@ namespace FpgaCongifurationManager
         public Form1()
         {
             InitializeComponent();
+            string[] fpgas = { "192.168.100.1", "192.168.100.45" };
+            setFpgaList(fpgas);
         }
+
+        private void setFpgaList(string[] args)
+        {
+            if (args == null) { return; }
+            fpgaBoardSelectListBox.Items.Clear();
+            foreach (string name in args)
+            {
+                fpgaBoardSelectListBox.Items.Add(name);
+            }
+        }
+
+
     }
 }

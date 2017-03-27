@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fpgaListBox = new System.Windows.Forms.ComboBox();
+            FpgaPysical.FpgaStatus fpgaStatus1 = new FpgaPysical.FpgaStatus();
+            this.fpgaBoardSelectListBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.fpgaStatusComponent1 = new FpgaCongifurationManager.FpgaStatusComponent();
             this.SuspendLayout();
             // 
-            // fpgaListBox
+            // fpgaBoardSelectListBox
             // 
-            this.fpgaListBox.FormattingEnabled = true;
-            this.fpgaListBox.Location = new System.Drawing.Point(45, 33);
-            this.fpgaListBox.Name = "fpgaListBox";
-            this.fpgaListBox.Size = new System.Drawing.Size(316, 26);
-            this.fpgaListBox.TabIndex = 0;
+            this.fpgaBoardSelectListBox.FormattingEnabled = true;
+            this.fpgaBoardSelectListBox.Location = new System.Drawing.Point(45, 33);
+            this.fpgaBoardSelectListBox.Name = "fpgaBoardSelectListBox";
+            this.fpgaBoardSelectListBox.Size = new System.Drawing.Size(316, 26);
+            this.fpgaBoardSelectListBox.TabIndex = 0;
             // 
             // button1
             // 
@@ -52,19 +53,20 @@
             // 
             // fpgaStatusComponent1
             // 
-            this.fpgaStatusComponent1.Location = new System.Drawing.Point(69, 212);
+            this.fpgaStatusComponent1.fpgaStatus = fpgaStatus1;
+            this.fpgaStatusComponent1.Location = new System.Drawing.Point(72, 90);
             this.fpgaStatusComponent1.Name = "fpgaStatusComponent1";
-            this.fpgaStatusComponent1.Size = new System.Drawing.Size(1105, 420);
+            this.fpgaStatusComponent1.Size = new System.Drawing.Size(1020, 637);
             this.fpgaStatusComponent1.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1337, 765);
+            this.ClientSize = new System.Drawing.Size(1337, 768);
             this.Controls.Add(this.fpgaStatusComponent1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.fpgaListBox);
+            this.Controls.Add(this.fpgaBoardSelectListBox);
             this.Name = "Form1";
             this.Text = "FPGA Configuration Manager";
             this.ResumeLayout(false);
@@ -73,7 +75,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox fpgaListBox;
+        private System.Windows.Forms.ComboBox fpgaBoardSelectListBox;
         private System.Windows.Forms.Button button1;
         private FpgaStatusComponent fpgaStatusComponent1;
     }
